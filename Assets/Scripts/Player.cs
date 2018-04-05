@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    private float speed;
+    public float speed;
 
 	// Use this for initialization
 	void Start () {
-        speed = 3;
 	}
 	
 	// Update is called once per frame
