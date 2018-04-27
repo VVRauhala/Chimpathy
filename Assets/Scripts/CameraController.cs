@@ -9,14 +9,12 @@ public class CameraController : MonoBehaviour {
     public float moveSpeed;
 
 	// Use this for initialization
-	void Start ()
-    {
+	void Start () {
 
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate()
-    {
+	void FixedUpdate() {
         targetPosition = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, targetPosition, moveSpeed * Time.deltaTime);
     }
