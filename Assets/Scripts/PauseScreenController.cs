@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StartScreenController : MonoBehaviour {
+public class PauseScreenController : MonoBehaviour {
 
-    public GameObject StartScreen;
-    public Button StartButton;
+    public GameObject PauseScreen;
+    public Button ContinueButton;
     public Button QuitButton;
     public Button IntroductionButton;
     public Button IntroBackButton;
@@ -17,29 +17,22 @@ public class StartScreenController : MonoBehaviour {
         // Stop time while in the menu
         Time.timeScale = 0F;
         // Setting up buttons
-        StartButton.GetComponent<Button>().onClick.AddListener(OnStartButtonClick);
+        ContinueButton.GetComponent<Button>().onClick.AddListener(OnContinueButtonClick);
         QuitButton.GetComponent<Button>().onClick.AddListener(OnQuitButtonClick);
         IntroductionButton.GetComponent<Button>().onClick.AddListener(IntroUp);
         IntroBackButton.GetComponent<Button>().onClick.AddListener(IntroDown);
     }
 
     void Update() {
-        if (Input.GetKey("space")) {
-            OnStartButtonClick();
-        }
-        /*// Quit game
         if (Input.GetKey("escape")) {
-            OnQuitButtonClick();
-        }*/
+            UnPause();
+        }
     }
 
-    // Starting game
-    void OnStartButtonClick() {
-        // Unpause game
+    // Pause game
+    void UnPause() {
+        PauseScreen.SetActive(false);
         Time.timeScale = 1F;
-        IntroDown();
-        // Hide the menu
-        StartScreen.SetActive(false);
     }
 
     // Quit game
@@ -49,7 +42,7 @@ public class StartScreenController : MonoBehaviour {
 
     // Introductions
     void IntroUp() {
-        StartButton.gameObject.SetActive(false);
+        ContinueButton.gameObject.SetActive(false);
         QuitButton.gameObject.SetActive(false);
         IntroductionButton.gameObject.SetActive(false);
         IntroductionText.gameObject.SetActive(true);
@@ -60,7 +53,7 @@ public class StartScreenController : MonoBehaviour {
     void IntroDown() {
         IntroductionText.gameObject.SetActive(false);
         IntroBackButton.gameObject.SetActive(false);
-        StartButton.gameObject.SetActive(true);
+        ContinueButton.gameObject.SetActive(true);
         QuitButton.gameObject.SetActive(true);
         IntroductionButton.gameObject.SetActive(true);
     }

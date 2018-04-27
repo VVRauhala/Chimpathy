@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85079a0b2550e2c49bc8473236bf06e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartScreen: {fileID: 1756331723}
+  PauseScreen: {fileID: 1756331723}
 --- !u!1 &675450318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,9 +1020,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Start
-
-'
+  m_Text: Continue
 --- !u!222 &1554143050
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1276,12 +1274,12 @@ GameObject:
   - component: {fileID: 1756331724}
   - component: {fileID: 1756331725}
   m_Layer: 0
-  m_Name: StartScreen
+  m_Name: PauseScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1756331724
 Transform:
   m_ObjectHideFlags: 0
@@ -1307,8 +1305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fb37c6dc5c04140972d904e9ef7743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartScreen: {fileID: 1756331723}
-  StartButton: {fileID: 1901687506}
+  PauseScreen: {fileID: 1756331723}
+  ContinueButton: {fileID: 1901687506}
   QuitButton: {fileID: 1557327678}
   IntroductionButton: {fileID: 335108622}
   IntroBackButton: {fileID: 1201788712}
@@ -1475,7 +1473,7 @@ GameObject:
   - component: {fileID: 1901687507}
   - component: {fileID: 1901687506}
   m_Layer: 0
-  m_Name: StartButton
+  m_Name: ContinueButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

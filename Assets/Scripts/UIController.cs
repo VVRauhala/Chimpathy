@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour {
-    public GameObject StartScreen;
+    public GameObject PauseScreen;
 
     // Use this for initialization
     void Start () {
@@ -15,7 +15,7 @@ public class UIController : MonoBehaviour {
 	void Update () {
         if (Input.GetKey("escape")) {
             Time.timeScale = 0F;
-            StartScreen.SetActive(true);
+            PauseScreen.SetActive(true);
         }
     }
 }
