@@ -24,15 +24,14 @@ public class PauseScreenController : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKey("escape")) {
-            UnPause();
-        }
+
     }
 
     // Pause game
-    void UnPause() {
+    void OnContinueButtonClick() {
         PauseScreen.SetActive(false);
-        Time.timeScale = 1F;
+        Time.timeScale = 1f;
+        
     }
 
     // Quit game
