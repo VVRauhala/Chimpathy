@@ -31,7 +31,6 @@ public class PauseScreenController : MonoBehaviour {
     void OnContinueButtonClick() {
         PauseScreen.SetActive(false);
         Time.timeScale = 1f;
-        
     }
 
     // Quit game
@@ -49,7 +48,7 @@ public class PauseScreenController : MonoBehaviour {
     }
     
     // Back to start screen from intro page
-    void IntroDown() {
+    public void IntroDown() {
         IntroductionText.gameObject.SetActive(false);
         IntroBackButton.gameObject.SetActive(false);
         ContinueButton.gameObject.SetActive(true);
