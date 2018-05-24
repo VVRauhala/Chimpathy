@@ -23,11 +23,6 @@ public class Player : MonoBehaviour {
 
     private void Update()
     {
-        // lowering hunger level
-        if (hunger > 0)
-        {
-           
-        }
         // Horizontal movement, different for both for flip
         if (Input.GetAxisRaw("Horizontal") > 0.5f)
         {
@@ -74,6 +69,7 @@ public class Player : MonoBehaviour {
         {
             Debug.Log("hunger = " + hunger);
             Debug.Log("Died");
+            Application.Quit();
         }
     }
 }
